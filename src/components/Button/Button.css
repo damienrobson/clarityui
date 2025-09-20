@@ -1,0 +1,66 @@
+.btn {
+  padding: 0.5rem 1rem;
+  min-width: 100px;
+  border-radius: 0px;
+  border: none;
+  font-weight: 700;
+}
+
+.btn--small {
+  min-height: 24px;
+}
+
+.btn--medium {
+  min-height: 32px;
+}
+
+.btn--large {
+  min-height: 40px;
+}
+
+.btn--primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #1e40af;
+  cursor: pointer;
+}
+
+.btn--primary:focus {
+  background-color: #1e40af;
+  outline: 2px solid #1e40af;
+  outline-offset: 2px;
+}
+
+.btn--primary:active {
+  background-color: #1e3a8a;
+}
+
+.btn--warning {
+  background-color: #e8cf00;
+  color: black;
+}
+
+.btn--error {
+  background-color: #c2182b;
+  color: white;
+}
+
+.btn--success {
+  background-color: #168317;
+  color: white;
+}
+
+.btn--secondary {
+  background-color: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.btn--disabled {
+  background-color: #bbb;
+  color: white;
+  cursor: not-allowed;
+}
