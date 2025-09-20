@@ -1,6 +1,5 @@
 {
-  "name": "clarityui",
-  "private": true,
+  "name": "@damienrobson/clarityui",
   "version": "0.0.1",
   "type": "module",
   "files": [
