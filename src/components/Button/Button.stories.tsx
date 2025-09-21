@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Button } from './'
+import { Button } from './';
 
 const meta = {
   title: 'Components/Button',
@@ -58,6 +58,13 @@ const meta = {
         defaultValue: { summary: '() => {}' },
       },
     },
+    rounderCorners: {
+      control: 'boolean',
+      description: 'If true, the button will have rounded corners.',
+      table: {
+        type: { summary: 'boolean' },
+      },
+    },
     size: {
       control: 'radio',
       options: ['small', 'medium', 'large'],
@@ -87,11 +94,11 @@ const meta = {
     },
     variant: {
       control: 'radio',
-      options: ['primary', 'secondary', 'tertiary'],
+      options: ['primary'],
       description:
         'Defines the visual style of the button, which can affect its color and emphasis.',
       table: {
-        type: { summary: "'primary' | 'secondary' | 'tertiary'" },
+        type: { summary: "'primary'" },
         defaultValue: { summary: 'primary' },
       },
     },
@@ -102,20 +109,21 @@ const meta = {
     ariaLabelledby: '',
     disabled: false,
     label: 'Button',
+    rounderCorners: false,
     size: 'medium',
     type: 'button',
     validationType: 'default',
     variant: 'primary',
   },
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Button>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Demo: Story = {
   args: {
     onClick: () => {
-      alert('Button clicked!')
+      alert('Button clicked!');
     },
   },
-}
+};

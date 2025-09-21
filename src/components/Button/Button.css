@@ -1,66 +1,138 @@
+:root {
+  --btn-default-bg: #2563eb;
+  --btn-default-text: white;
+  --btn-default-hover: #1e40af;
+  --btn-default-active: #1e3a8a;
+
+  --btn-warning-bg: #e8cf00;
+  --btn-warning-text: black;
+  --btn-warning-text-alt: white;
+  --btn-warning-hover: #a68a00;
+  --btn-warning-active: #6b5c00;
+
+  --btn-error-bg: #c2182b;
+  --btn-error-text: white;
+  --btn-error-hover: #8b101a;
+  --btn-error-active: #5c0a12;
+
+  --btn-success-bg: #168317;
+  --btn-success-text: white;
+  --btn-success-hover: #0f5c0f;
+  --btn-success-active: #0a3d0a;
+
+  --btn-disabled-bg: #bbb;
+  --btn-disabled-text: white;
+}
+
 .btn {
   padding: 0.5rem 1rem;
-  min-width: 100px;
+  min-width: 128px;
   border-radius: 0px;
   border: none;
   font-weight: 700;
 }
 
+.btn:focus-visible {
+  outline: 9px double black;
+  box-shadow: 0 0 0 6px white;
+}
+
 .btn--small {
-  min-height: 24px;
+  min-height: 32px;
+  font-size: 14px;
+  min-width: 96px;
 }
 
 .btn--medium {
-  min-height: 32px;
+  min-height: 40px;
+  font-size: 16px;
+  min-width: 128px;
 }
 
 .btn--large {
-  min-height: 40px;
+  min-height: 48px;
+  font-size: 18px;
+  min-width: 160px;
 }
 
 .btn--primary {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--btn-default-bg);
+  color: var(--btn-default-text);
 }
 
 .btn--primary:hover {
-  background-color: #1e40af;
+  background-color: var(--btn-default-hover);
   cursor: pointer;
 }
 
-.btn--primary:focus {
-  background-color: #1e40af;
-  outline: 2px solid #1e40af;
-  outline-offset: 2px;
-}
-
 .btn--primary:active {
-  background-color: #1e3a8a;
+  background-color: var(--btn-default-active);
 }
 
-.btn--warning {
-  background-color: #e8cf00;
-  color: black;
-}
-
-.btn--error {
-  background-color: #c2182b;
-  color: white;
+.btn--primary:disabled {
+  background-color: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
+  cursor: not-allowed;
 }
 
 .btn--success {
-  background-color: #168317;
-  color: white;
+  background-color: var(--btn-success-bg);
+  color: var(--btn-success-text);
 }
 
-.btn--secondary {
-  background-color: white;
-  color: #2563eb;
-  border: 2px solid #2563eb;
+.btn--success:hover {
+  background-color: var(--btn-success-hover);
+  cursor: pointer;
+}
+
+.btn--success:active {
+  background-color: var(--btn-success-active);
+}
+
+.btn--warning {
+  background-color: var(--btn-warning-bg);
+  color: var(--btn-warning-text);
+}
+
+.btn--warning:hover {
+  background-color: var(--btn-warning-hover);
+  color: var(--btn-warning-text-alt);
+  cursor: pointer;
+}
+
+.btn--warning:active {
+  background-color: var(--btn-warning-active);
+  color: var(--btn-warning-text-alt);
+}
+
+.btn--error {
+  background-color: var(--btn-error-bg);
+  color: var(--btn-warning-text-alt);
+}
+
+.btn--error:hover {
+  background-color: var(--btn-error-hover);
+  cursor: pointer;
+}
+
+.btn--error:active {
+  background-color: var(--btn-error-active);
 }
 
 .btn--disabled {
-  background-color: #bbb;
-  color: white;
+  background-color: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
   cursor: not-allowed;
+}
+
+.btn--small.btn--rounded {
+  border-radius: 8px;
+}
+
+.btn--medium.btn--rounded {
+  border-radius: 12px;
+}
+
+.btn--large.btn--rounded {
+  border-radius: 16px;
 }

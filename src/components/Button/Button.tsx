@@ -1,25 +1,27 @@
-import './Button.css'
+import './Button.css';
 
-interface ButtonProps {
-  ariaDescribedby?: string
-  ariaLabel?: string
-  ariaLabelledby?: string
-  disabled?: boolean
-  label: string
-  onClick: () => void
-  size?: 'small' | 'medium' | 'large'
-  type?: 'button' | 'submit' | 'reset'
-  validationType?: 'success' | 'warning' | 'error' | 'default'
-  variant?: 'primary' | 'secondary' | 'tertiary'
+export interface ButtonProps {
+  ariaDescribedby?: string;
+  ariaLabel?: string;
+  ariaLabelledby?: string;
+  disabled?: boolean;
+  label: string;
+  onClick: () => void;
+  rounderCorners?: boolean;
+  size?: 'small' | 'medium' | 'large';
+  type?: 'button' | 'submit' | 'reset';
+  validationType?: 'success' | 'warning' | 'error' | 'default';
+  variant?: 'primary';
 }
 
-const Button = ({
+export const Button = ({
   ariaDescribedby,
   ariaLabel,
   ariaLabelledby,
   disabled = false,
   label,
   onClick,
+  rounderCorners = false,
   size = 'medium',
   type = 'button',
   validationType = 'default',
@@ -28,11 +30,12 @@ const Button = ({
 }: ButtonProps) => {
   const classNames = [
     'btn',
+    rounderCorners ? 'btn--rounded' : '',
     `btn--${variant}`,
     `btn--${size}`,
     `btn--${validationType}`,
     disabled ? 'btn--disabled' : '',
-  ].join(' ')
+  ].join(' ');
 
   return (
     <button
@@ -49,7 +52,7 @@ const Button = ({
     >
       {label}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
