@@ -37,16 +37,20 @@ export const Button = ({
     disabled ? 'btn--disabled' : '',
   ].join(' ');
 
+  if ([label, ariaLabel, ariaLabelledby].filter(Boolean).length > 1) {
+    console.warn(
+      '[Button]: Provide only one of `label`, `ariaLabel`, or `ariaLabelledby` to avoid conflicting accessible names.'
+    );
+  }
+
   return (
     <button
-      aria-disabled={disabled}
       aria-describedby={ariaDescribedby}
       aria-label={ariaLabel}
       aria-labelledby={ariaLabelledby}
       className={classNames}
       disabled={disabled}
       onClick={onClick}
-      role='button'
       type={type}
       {...props}
     >

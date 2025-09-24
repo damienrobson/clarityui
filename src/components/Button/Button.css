@@ -6,9 +6,8 @@
 
   --btn-warning-bg: #e8cf00;
   --btn-warning-text: black;
-  --btn-warning-text-alt: white;
-  --btn-warning-hover: #a68a00;
-  --btn-warning-active: #6b5c00;
+  --btn-warning-hover: #c6b200;
+  --btn-warning-active: #9e8f00;
 
   --btn-error-bg: #c2182b;
   --btn-error-text: white;
@@ -21,7 +20,7 @@
   --btn-success-active: #0a3d0a;
 
   --btn-disabled-bg: #bbb;
-  --btn-disabled-text: white;
+  --btn-disabled-text: #333;
 }
 
 .btn {
@@ -96,18 +95,18 @@
 
 .btn--warning:hover {
   background-color: var(--btn-warning-hover);
-  color: var(--btn-warning-text-alt);
+  color: var(--btn-warning-text);
   cursor: pointer;
 }
 
 .btn--warning:active {
   background-color: var(--btn-warning-active);
-  color: var(--btn-warning-text-alt);
+  color: var(--btn-warning-text);
 }
 
 .btn--error {
   background-color: var(--btn-error-bg);
-  color: var(--btn-warning-text-alt);
+  color: var(--btn-error-text);
 }
 
 .btn--error:hover {
@@ -117,6 +116,14 @@
 
 .btn--error:active {
   background-color: var(--btn-error-active);
+}
+
+.btn--success:disabled,
+.btn--warning:disabled,
+.btn--error:disabled {
+  background-color: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
+  cursor: not-allowed;
 }
 
 .btn--disabled {

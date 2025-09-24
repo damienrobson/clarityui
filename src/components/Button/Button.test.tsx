@@ -97,5 +97,99 @@ describe('Button', () => {
         borderRadius: '12px',
       });
     });
+
+    it('should call onClick when clicked', () => {
+      const handleClick = vi.fn();
+      render(
+        <Button
+          label='Click me'
+          onClick={handleClick}
+        />
+      );
+      screen.getByRole('button').click();
+      expect(handleClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('should not call onClick when disabled', () => {
+      const handleClick = vi.fn();
+      render(
+        <Button
+          label='Disabled'
+          disabled
+          onClick={handleClick}
+        />
+      );
+      screen.getByRole('button').click();
+      expect(handleClick).not.toHaveBeenCalled();
+    });
+
+    it('should apply aria-label when provided', () => {
+      render(
+        <Button
+          label='Visible'
+          ariaLabel='Accessible Label'
+          onClick={() => {}}
+        />
+      );
+      expect(screen.getByRole('button', { name: 'Accessible Label' })).toBeInTheDocument();
+    });
+
+    it('should use aria-labelledby when provided', () => {
+      render(
+        <>
+          <span id='external-label'>External Label</span>
+          <Button
+            label='Ignored'
+            ariaLabelledby='external-label'
+            onClick={() => {}}
+          />
+        </>
+      );
+      expect(screen.getByRole('button', { name: 'External Label' })).toBeInTheDocument();
+    });
+
+    it('should apply aria-describedby when provided', () => {
+      render(
+        <>
+          <span id='desc'>Extra description</span>
+          <Button
+            label='Described'
+            ariaDescribedby='desc'
+            onClick={() => {}}
+          />
+        </>
+      );
+      expect(screen.getByRole('button')).toHaveAttribute('aria-describedby', 'desc');
+    });
+
+    it("should apply 'primary' variant class", () => {
+      render(<Component variant='primary' />);
+      expect(screen.getByRole('button')).toHaveClass('btn--primary');
+    });
+
+    it("should apply 'success' validation type class", () => {
+      render(<Component validationType='success' />);
+      expect(screen.getByRole('button')).toHaveClass('btn--success');
+    });
+
+    it("should apply 'warning' validation type class", () => {
+      render(<Component validationType='warning' />);
+      expect(screen.getByRole('button')).toHaveClass('btn--warning');
+    });
+
+    it("should apply 'error' validation type class", () => {
+      render(<Component validationType='error' />);
+      expect(screen.getByRole('button')).toHaveClass('btn--error');
+    });
+
+    it('should default type to "button"', () => {
+      render(<Component />);
+      expect(screen.getByRole('button')).toHaveAttribute('type', 'button');
+    });
+
+    it('should support type="submit"', () => {
+      render(<Component type='submit' />);
+      expect(screen.getByRole('button')).toHaveAttribute('type', 'submit');
+    });
   });
 });

@@ -8,7 +8,6 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
   argTypes: {
     ariaDescribedby: {
       control: 'text',
@@ -119,6 +118,15 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    label: 'Default button',
+    onClick: () => {
+      alert('Button clicked!');
+    },
+  },
+};
 
 export const Demo: Story = {
   args: {

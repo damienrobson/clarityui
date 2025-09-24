@@ -1,0 +1,46 @@
+import { ArgTypes, Canvas, Meta } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories.tsx';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+## Contents
+
+- [Quick Start](#quick-start)
+- [Accessibility](#accessibility)
+- [Examples](#examples)
+- [Props](#props)
+
+## Quick Start
+
+```js
+import { Button } from '@damienrobson/clarity-ui';
+```
+
+The `Button` component is a fully accessible, versatile button with support for multiple sizes, variants, rounded corners, validation states, and disabled states.
+
+It is built on the native `<button>` element and automatically handles keyboard accessibility, focus, and screen reader support.
+
+---
+
+## Accessibility
+
+- Uses a semantic `<button>` element (role is implicit).
+- Supports `aria-label`, `aria-labelledby`, and `aria-describedby` for screen reader labeling.
+- Focused state is visually distinct (`outline` + `box-shadow`).
+- Disabled state uses the native `disabled` attribute and provides a visible style.
+
+---
+
+## Examples
+
+### Default
+
+<Canvas of={ButtonStories.Default} />
+
+---
+
+## Props
+
+<ArgTypes of={ButtonStories} />
