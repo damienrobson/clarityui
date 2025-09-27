@@ -1,0 +1,24 @@
+:root {
+  --btn-default-bg: #2563eb;
+  --btn-default-text: white;
+  --btn-default-hover: #1e40af;
+  --btn-default-active: #1e3a8a;
+
+  --btn-warning-bg: #e8cf00;
+  --btn-warning-text: black;
+  --btn-warning-hover: #c6b200;
+  --btn-warning-active: #9e8f00;
+
+  --btn-error-bg: #c2182b;
+  --btn-error-text: white;
+  --btn-error-hover: #8b101a;
+  --btn-error-active: #5c0a12;
+
+  --btn-success-bg: #168317;
+  --btn-success-text: white;
+  --btn-success-hover: #0f5c0f;
+  --btn-success-active: #0a3d0a;
+
+  --btn-disabled-bg: #bbb;
+  --btn-disabled-text: #333;
+}
