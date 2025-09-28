@@ -5,6 +5,7 @@ export interface ButtonProps {
   ariaLabel?: string;
   ariaLabelledby?: string;
   disabled?: boolean;
+  id: string;
   label: string;
   onClick: () => void;
   rounderCorners?: boolean;
@@ -19,6 +20,7 @@ export const Button = ({
   ariaLabel,
   ariaLabelledby,
   disabled = false,
+  id,
   label,
   onClick,
   rounderCorners = false,
@@ -50,6 +52,7 @@ export const Button = ({
       aria-labelledby={ariaLabelledby}
       className={classNames}
       disabled={disabled}
+      id={id}
       onClick={onClick}
       type={type}
       {...props}

@@ -41,6 +41,14 @@ const meta = {
         type: { summary: 'boolean' },
       },
     },
+    id: {
+      control: 'text',
+      description: 'The ID of the input.',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: '' },
+      },
+    },
     label: {
       control: 'text',
       description: 'The text to be displayed on the button.',
@@ -107,6 +115,7 @@ const meta = {
     ariaLabel: '',
     ariaLabelledby: '',
     disabled: false,
+    id: '',
     label: 'Button',
     rounderCorners: false,
     size: 'medium',

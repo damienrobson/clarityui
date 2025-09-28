@@ -1,3 +1,4 @@
-import './styles/themes.css';
+import './theme/themes.css';
 
-export { Button } from './components';
+export { Button, Input } from './components';
+export { useTheme, ThemeProvider } from './theme';
