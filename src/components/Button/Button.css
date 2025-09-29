@@ -1,120 +1,120 @@
 .btn {
-  padding: 0.5rem 1rem;
-  min-width: 128px;
-  border-radius: 0px;
+  padding: var(--padding-050) var(--padding-100);
+  min-width: var(--size-md-min-width);
+  border-radius: var(--rounding-none);
   border: none;
-  font-weight: 700;
+  font-weight: var(--font-weight-normal);
 }
 
 .btn:focus-visible {
-  outline: 9px double black;
-  box-shadow: 0 0 0 6px white;
+  outline: 9px double var(--colour-dark);
+  box-shadow: 0 0 0 6px var(--colour-light);
 }
 
 .btn--small {
-  min-height: 32px;
-  font-size: 14px;
-  min-width: 96px;
+  min-height: var(--size-sm-min-height);
+  font-size: var(--size-sm-font-size);
+  min-width: var(--size-sm-min-width);
 }
 
 .btn--medium {
-  min-height: 40px;
-  font-size: 16px;
-  min-width: 128px;
+  min-height: var(--size-md-min-height);
+  font-size: var(--size-md-font-size);
+  min-width: var(--size-md-min-width);
 }
 
 .btn--large {
-  min-height: 48px;
-  font-size: 18px;
-  min-width: 160px;
+  min-height: var(--size-lg-min-height);
+  font-size: var(--size-lg-font-size);
+  min-width: var(--size-lg-min-width);
 }
 
 .btn--primary {
-  background-color: var(--btn-default-bg);
-  color: var(--btn-default-text);
+  background-color: var(--colour-default-bg);
+  color: var(--colour-default-text);
 }
 
 .btn--primary:hover {
-  background-color: var(--btn-default-hover);
+  background-color: var(--colour-default-hover);
   cursor: pointer;
 }
 
 .btn--primary:active {
-  background-color: var(--btn-default-active);
+  background-color: var(--colour-default-active);
 }
 
 .btn--primary:disabled {
-  background-color: var(--btn-disabled-bg);
-  color: var(--btn-disabled-text);
+  background-color: var(--colour-disabled-bg);
+  color: var(--colour-disabled-text);
   cursor: not-allowed;
 }
 
 .btn--success {
-  background-color: var(--btn-success-bg);
-  color: var(--btn-success-text);
+  background-color: var(--colour-success-bg);
+  color: var(--colour-success-text);
 }
 
 .btn--success:hover {
-  background-color: var(--btn-success-hover);
+  background-color: var(--colour-success-hover);
   cursor: pointer;
 }
 
 .btn--success:active {
-  background-color: var(--btn-success-active);
+  background-color: var(--colour-success-active);
 }
 
 .btn--warning {
-  background-color: var(--btn-warning-bg);
-  color: var(--btn-warning-text);
+  background-color: var(--colour-warning-bg);
+  color: var(--colour-warning-text);
 }
 
 .btn--warning:hover {
-  background-color: var(--btn-warning-hover);
-  color: var(--btn-warning-text);
+  background-color: var(--colour-warning-hover);
+  color: var(--colour-warning-text);
   cursor: pointer;
 }
 
 .btn--warning:active {
-  background-color: var(--btn-warning-active);
-  color: var(--btn-warning-text);
+  background-color: var(--colour-warning-active);
+  color: var(--colour-warning-text);
 }
 
 .btn--error {
-  background-color: var(--btn-error-bg);
-  color: var(--btn-error-text);
+  background-color: var(--colour-error-bg);
+  color: var(--colour-error-text);
 }
 
 .btn--error:hover {
-  background-color: var(--btn-error-hover);
+  background-color: var(--colour-error-hover);
   cursor: pointer;
 }
 
 .btn--error:active {
-  background-color: var(--btn-error-active);
+  background-color: var(--colour-error-active);
 }
 
 .btn--success:disabled,
 .btn--warning:disabled,
 .btn--error:disabled {
-  background-color: var(--btn-disabled-bg);
-  color: var(--btn-disabled-text);
+  background-color: var(--colour-disabled-bg);
+  color: var(--colour-disabled-text);
   cursor: not-allowed;
 }
 
 .btn--disabled {
-  background-color: var(--btn-disabled-bg);
-  color: var(--btn-disabled-text);
+  background-color: var(--colour-disabled-bg);
+  color: var(--colour-disabled-text);
   cursor: not-allowed;
 }
 
 .btn--small.btn--rounded {
-  border-radius: 8px;
+  border-radius: var(--rounding-sm);
 }
 
 .btn--medium.btn--rounded {
-  border-radius: 12px;
+  border-radius: var(--rounding-md);
 }
 
 .btn--large.btn--rounded {
-  border-radius: 16px;
+  border-radius: var(--rounding-lg);
 }

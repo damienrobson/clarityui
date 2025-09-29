@@ -1,24 +1,51 @@
 :root {
-  --btn-default-bg: #2563eb;
-  --btn-default-text: white;
-  --btn-default-hover: #1e40af;
-  --btn-default-active: #1e3a8a;
+  --colour-default-bg: #2563eb;
+  --colour-default-text: white;
+  --colour-default-hover: #1e40af;
+  --colour-default-active: #1e3a8a;
 
-  --btn-warning-bg: #e8cf00;
-  --btn-warning-text: black;
-  --btn-warning-hover: #c6b200;
-  --btn-warning-active: #9e8f00;
+  --colour-warning-bg: #e8cf00;
+  --colour-warning-text: black;
+  --colour-warning-hover: #c6b200;
+  --colour-warning-active: #9e8f00;
 
-  --btn-error-bg: #c2182b;
-  --btn-error-text: white;
-  --btn-error-hover: #8b101a;
-  --btn-error-active: #5c0a12;
+  --colour-error-bg: #c2182b;
+  --colour-error-text: white;
+  --colour-error-hover: #8b101a;
+  --colour-error-active: #5c0a12;
 
-  --btn-success-bg: #168317;
-  --btn-success-text: white;
-  --btn-success-hover: #0f5c0f;
-  --btn-success-active: #0a3d0a;
+  --colour-success-bg: #168317;
+  --colour-success-text: white;
+  --colour-success-hover: #0f5c0f;
+  --colour-success-active: #0a3d0a;
 
-  --btn-disabled-bg: #bbb;
-  --btn-disabled-text: #333;
+  --colour-disabled-bg: #bbb;
+  --colour-disabled-text: #333;
+
+  ---colour-light: #eee;
+  ---colour-dark: #222;
+
+  --size-sm-min-height: 32px;
+  --size-sm-font-size: 14px;
+  --size-sm-min-width: 96px;
+
+  --size-md-min-height: 40px;
+  --size-md-font-size: 16px;
+  --size-md-min-width: 128px;
+
+  --size-lg-min-height: 48px;
+  --size-lg-font-size: 18px;
+  --size-lg-min-width: 160px;
+
+  --rounding-none: 0px;
+  --rounding-sm: 8px;
+  --rounding-md: 12px;
+  --rounding-lg: 16px;
+
+  --padding-050: 0.5rem;
+  --padding-100: 1rem;
+  --padding-200: 2rem;
+  --padding-400: 4rem;
+
+  --font-weight-normal: 700;
 }
