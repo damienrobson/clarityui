@@ -1,3 +1,4 @@
+import { useId, useRef } from 'react';
 import './Button.css';
 
 export interface ButtonProps {
@@ -5,7 +6,7 @@ export interface ButtonProps {
   ariaLabel?: string;
   ariaLabelledby?: string;
   disabled?: boolean;
-  id: string;
+  id?: string;
   label: string;
   onClick: () => void;
   rounderCorners?: boolean;
@@ -39,6 +40,9 @@ export const Button = ({
     disabled ? 'btn--disabled' : '',
   ].join(' ');
 
+  const internalId = useId();
+  const guid = useRef(id ?? internalId);
+
   if ([label, ariaLabel, ariaLabelledby].filter(Boolean).length > 1) {
     console.warn(
       '[Button]: Provide only one of `label`, `ariaLabel`, or `ariaLabelledby` to avoid conflicting accessible names.'
@@ -52,7 +56,7 @@ export const Button = ({
       aria-labelledby={ariaLabelledby}
       className={classNames}
       disabled={disabled}
-      id={id}
+      id={guid.current}
       onClick={onClick}
       type={type}
       {...props}

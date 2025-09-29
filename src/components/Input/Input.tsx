@@ -1,4 +1,4 @@
-import type { ChangeEvent } from 'react';
+import { useId, useRef, type ChangeEvent } from 'react';
 
 export interface InputProps {
   ariaDescribedby?: string;
@@ -41,6 +41,9 @@ export const Input = ({
     disabled ? 'inpt--disabled' : '',
   ].join(' ');
 
+  const internalId = useId();
+  const guid = useRef(id ?? internalId);
+
   if ([label, ariaLabel, ariaLabelledby].filter(Boolean).length > 1) {
     console.warn(
       '[Input]: Provide only one of `label`, `ariaLabel`, or `ariaLabelledby` to avoid conflicting accessible names.'
@@ -50,9 +53,9 @@ export const Input = ({
   if (readOnly) {
     return (
       <div>
-        <label htmlFor={id}>{label}</label>
+        <label htmlFor={guid.current}>{label}</label>
         <div
-          id={id}
+          id={guid.current}
           className={classNames}
         >
           {value}
@@ -63,14 +66,14 @@ export const Input = ({
 
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={guid.current}>{label}</label>
       <input
         aria-describedby={ariaDescribedby}
         aria-label={ariaLabel}
         aria-labelledby={ariaLabelledby}
         className={classNames}
         disabled={disabled}
-        id={id}
+        id={guid.current}
         onChange={(e) => onChange(e)}
         placeholder={placeholder}
         required={required}
